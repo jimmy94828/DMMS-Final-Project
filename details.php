@@ -60,8 +60,7 @@ $stmt->execute(['id' => $id]);
 $reviews = $stmt->fetchAll(PDO::FETCH_COLUMN);
 
 $query_review_scores = "
-    SELECT number_of_reviews, review_scores_rating, review_scores_accuracy, review_scores_cleanliness,
-           review_scores_checkin, review_scores_communication, review_scores_location
+    SELECT number_of_reviews, review_scores_rating, review_scores_accuracy, review_scores_cleanliness, review_scores_checkin, review_scores_communication, review_scores_location
     FROM listings_review_score
     WHERE id = :id
 ";
